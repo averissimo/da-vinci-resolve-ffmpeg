@@ -20,9 +20,15 @@ Run python script and then check output directories
 
 `$ python convert.py`
 
-Scripts:
+Bash script to convert inside directory:
 
-`$ ffmpeg -i <input> -c:v mpeg4 -qscale:v 1 -c:a pcm_s24le <output.mov>`
+```
+$ mkdir -p converted && for file in *.mp4; do
+  ffmpeg -i $file -c:v mpeg4 -qscale:v 1 -c:a pcm_s24le converted/$file.mov
+done
+```
+
+Other interesting calls for ffmpeg
 
 `$ ffmpeg -i <input> -c:v prores_ks -profile:v 3 -qscale:v 9 -vendor ap10 -pix_fmt yuv422p10le -c:a pcm_s24le <output.mov>`
 
