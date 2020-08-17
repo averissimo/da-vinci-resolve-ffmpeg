@@ -10,11 +10,17 @@ My choice at this point for video:
 For audio:
 
 * `pcm_s24le` for MOV container
-* Nothing seems compatible with MP4 container
+* Nothing seems compatible with MP4 container *(without crashing)*
 
 If audio doesn't matter `VP9` in mp4 works. Flac should work for audio, but resolve crashes.
 
-Scripts
+## How to run
+
+Run python script and then check output directories
+
+`$ python convert.py`
+
+Scripts:
 
 `$ ffmpeg -i <input> -c:v mpeg4 -qscale:v 1 -c:a pcm_s24le <output.mov>`
 

@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 from subprocess import run
 from os import mkdir, path, remove
 
